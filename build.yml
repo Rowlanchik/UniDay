@@ -1,0 +1,156 @@
+name: Build and publish UniDay
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+    paths: ['App/**', 'Shared/**', 'Widget/**', 'scripts/**', 'tests/**', 'project.yml', 'UniDay-source.zip', '.github/workflows/build.yml']
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'smoke: минимальный тест; build: только сборка; release: IPA и постоянный источник'
+        type: choice
+        options: [smoke, build, release]
+        default: smoke
+      version:
+        description: 'Версия для ручного выпуска (например 8.0.0)'
+        default: '8.0.0'
+      prerelease:
+        description: 'Первый перенос до испытаний на двух iPhone — тестовый выпуск'
+        type: boolean
+        default: true
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: uniday-release
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 35
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Expand initial source upload
+        if: ${{ hashFiles('UniDay-source.zip') != '' }}
+        run: |
+          python3 - <<'PY'
+          import zipfile,pathlib
+          root=pathlib.Path.cwd().resolve()
+          with zipfile.ZipFile('UniDay-source.zip') as z:
+              for i in z.infolist():
+                  p=root/i.filename
+                  if not p.resolve().is_relative_to(root): raise SystemExit('Unsafe path')
+                  if i.filename.startswith('.github/'): continue
+                  z.extract(i, root)
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm UniDay-source.zip
+          git add App Shared Widget scripts tests docs site project.yml README.md CHANGELOG.md .gitignore
+          git commit -m 'Import complete UniDay app and widget source'
+          git push origin HEAD:main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test preserved engines and distribution
+        run: |
+          node --test tests/*.mjs
+          python3 -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Select version
+        id: version
+        env:
+          REQUEST_VERSION: ${{ inputs.version }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          python3 - <<'PY'
+          import os,re
+          ref=os.environ['GITHUB_REF_NAME']
+          version=ref[1:] if ref.startswith('v') else (os.environ.get('REQUEST_VERSION') or '8.0.0')
+          if not re.fullmatch(r'\d+\.\d+\.\d+',version): raise SystemExit('Use vMAJOR.MINOR.PATCH')
+          mode=os.environ.get('MODE') or ('release' if ref.startswith('v') else 'build')
+          tag=('smoke-' if mode=='smoke' else 'v')+version
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write(f'version={version}\nmode={mode}\ntag={tag}\n')
+          PY
+      - name: Generate Xcode project
+        run: |
+          brew install xcodegen
+          xcodebuild -version
+          xcodegen generate
+      - name: Test native storage and migrations
+        run: |
+          mkdir -p build
+          swiftc Shared/SharedStore.swift Shared/SharedGroupResolver.swift tests/SharedStoreTests.swift -o build/shared-store-tests
+          build/shared-store-tests
+      - name: Build device archive with WidgetKit
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+          MODE: ${{ steps.version.outputs.mode }}
+        run: |
+          smoke=0
+          if [ "$MODE" = smoke ]; then smoke=1; fi
+          xcodebuild -project UniDay.xcodeproj -scheme UniDay -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' -archivePath build/UniDay.xcarchive archive CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO MARKETING_VERSION="$VERSION" CURRENT_PROJECT_VERSION="$GITHUB_RUN_NUMBER" UNIDAY_SMOKE="$smoke"
+      - name: Preserve requested entitlements without Apple credentials
+        run: |
+          app=build/UniDay.xcarchive/Products/Applications/UniDay.app
+          test -d "$app/PlugIns/UniDayWidget.appex"
+          codesign --force --sign - --entitlements Widget/UniDayWidget.entitlements --generate-entitlement-der "$app/PlugIns/UniDayWidget.appex"
+          codesign --force --sign - --entitlements App/UniDay.entitlements --generate-entitlement-der "$app"
+          codesign --verify --deep --strict "$app"
+          python3 scripts/package-ipa.py --app "$app" --output build/UniDay.ipa
+          shasum -a 256 build/UniDay.ipa > build/UniDay.ipa.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: UniDay-${{ steps.version.outputs.mode }}-${{ steps.version.outputs.version }}
+          path: |
+            build/UniDay.ipa
+            build/UniDay.ipa.sha256
+          retention-days: 14
+      - name: Publish permanent GitHub Release
+        if: steps.version.outputs.mode != 'build'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
+          MODE: ${{ steps.version.outputs.mode }}
+          PRERELEASE: ${{ inputs.prerelease }}
+        run: |
+          args=()
+          if [ "$MODE" = smoke ] || [ "$PRERELEASE" = true ]; then args+=(--prerelease); fi
+          gh release create "$TAG" --target "$(git rev-parse HEAD)" --title "UniDay $VERSION ($MODE)" --notes-file CHANGELOG.md "${args[@]}" build/UniDay.ipa build/UniDay.ipa.sha256
+      - name: Update permanent source and preserve older releases
+        if: steps.version.outputs.mode == 'release'
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          mkdir -p build/pages
+          if git show origin/gh-pages:source.json > build/pages/source.json 2>/dev/null; then :; else rm -f build/pages/source.json; fi
+          python3 scripts/update-source.py --ipa build/UniDay.ipa --source build/pages/source.json --output build/pages/source.json --repository "$GITHUB_REPOSITORY" --tag "$TAG" --notes CHANGELOG.md
+          cp site/index.html site/icon.png build/pages/
+          cp docs/FRIEND.ru.md build/pages/FRIEND.ru.md
+          touch build/pages/.nojekyll
+          git worktree add --detach build/pages-checkout
+          cd build/pages-checkout
+          if git rev-parse origin/gh-pages >/dev/null 2>&1; then git checkout -B gh-pages origin/gh-pages; else git checkout --orphan gh-pages; git rm -rf .; fi
+          cp ../pages/* .
+          cp ../pages/.nojekyll .
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m "Publish UniDay $TAG source"
+          git push origin HEAD:gh-pages
+      - uses: actions/configure-pages@v5
+        if: steps.version.outputs.mode == 'release'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.version.outputs.mode == 'release'
+        with:
+          path: build/pages
+      - uses: actions/deploy-pages@v4
+        id: deployment
+        if: steps.version.outputs.mode == 'release'
