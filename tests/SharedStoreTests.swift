@@ -16,11 +16,15 @@ struct SharedStoreTests {
             ["op": "writeText", "path": calendar, "value": "{\"calendarURL\":\"https://example.test/private.ics\",\"stops\":[1,2]}"],
             ["op": "writeText", "path": "/documents/My-profile/packing.json", "value": "{\"books\":[\"book\"]}"],
             ["op": "writeText", "path": "/documents/My-profile/packing-checks.json", "value": "{\"2026-10-07\":[\"book\"]}"],
-            ["op": "writeImage", "path": "/documents/My-profile/widget.png", "dataURL": "data:image/png;base64,AA==", "width": 1, "height": 1]
+            ["op": "writeImage", "path": "/documents/My-profile/widget.png", "dataURL": "data:image/png;base64,AA==", "width": 1, "height": 1],
+            ["op": "writeImage", "path": "/documents/My-profile/default-dimensions.png", "dataURL": "data:image/png;base64,AA=="]
         ])
         let before = try store.exportBackup()
         let reinstalled = try SharedStore(rootURL: storeRoot, groupResolution: noGroup)
         check(try reinstalled.exportBackupState() == store.exportBackupState(), "Version update/reinitialization must preserve every file")
+        let defaultImage = (reinstalled.readState()["files"] as? [String: Any])?["/documents/My-profile/default-dimensions.png"] as? [String: Any] ?? [:]
+        check((defaultImage["width"] as? NSNumber)?.intValue == 0 && (defaultImage["height"] as? NSNumber)?.intValue == 0,
+              "Images without dimensions must atomically persist numeric zero defaults")
         let countBefore = (reinstalled.readState()["files"] as? [String: Any])?.count
         do {
             try reinstalled.apply([

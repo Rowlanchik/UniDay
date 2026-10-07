@@ -66,9 +66,10 @@ final class SharedStore {
                       value.hasPrefix("data:image/"), value.contains(";base64,") else {
                     throw StoreError.invalid("Изображение должно быть локальным data URL.")
                 }
+                let width: NSNumber = (operation["width"] as? NSNumber) ?? NSNumber(value: 0)
+                let height: NSNumber = (operation["height"] as? NSNumber) ?? NSNumber(value: 0)
                 files[path] = ["kind": "image", "dataURL": value,
-                               "width": operation["width"] as? NSNumber ?? 0,
-                               "height": operation["height"] as? NSNumber ?? 0]
+                               "width": width, "height": height]
                 Self.addParents(path, to: &directories)
             case "mkdir":
                 directories.insert(path)
