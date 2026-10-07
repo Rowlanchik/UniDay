@@ -1,0 +1,45 @@
+{
+  "name": "UniDay",
+  "identifier": "io.github.rowlanchik09.UniDay.source",
+  "subtitle": "Расписание, транспорт и виджет",
+  "description": "Бесплатный источник UniDay. Каждый пользователь настраивает свой профиль локально.",
+  "website": "https://rowlanchik.github.io/UniDay",
+  "iconURL": "https://rowlanchik.github.io/UniDay/icon.png",
+  "tintColor": "#487BFF",
+  "apps": [
+    {
+      "name": "UniDay",
+      "bundleIdentifier": "io.github.rowlanchik09.UniDay",
+      "developerName": "UniDay",
+      "subtitle": "Ваш учебный день",
+      "localizedDescription": "Расписание, автобусы, погода, заметки и списки вещей с виджетом рабочего стола.",
+      "iconURL": "https://rowlanchik.github.io/UniDay/icon.png",
+      "tintColor": "#487BFF",
+      "category": "utilities",
+      "versions": [
+        {
+          "version": "8.0.0",
+          "buildVersion": "4",
+          "minOSVersion": "17.0",
+          "date": "2026-10-07T16:50:37.619188Z",
+          "localizedDescription": "# UniDay 8.0.0 — перенос 7.9.0\n\nПервый тестовый выпуск самостоятельного iOS-приложения. Сохранены исходные движки и интерфейс UniDay 7.9.0, добавлены нативные адаптеры, один WidgetKit extension для трёх размеров, диагностика общей группы после переподписи, проверка версии, полный экспорт и восстановление данных.\n\nИспытания бесплатной подписи, обмена данными и обновления с сохранением профиля на двух отдельных Apple Accounts ещё требуют проверки на телефонах. Список возможностей и статусы проверки — в docs/FEATURE-PARITY.ru.md и docs/DEVICE-TESTS.ru.md.",
+          "downloadURL": "https://github.com/Rowlanchik/UniDay/releases/download/v8.0.0/UniDay.ipa",
+          "size": 601340,
+          "sha256": "3996246be5b631296520cc98fd4312d45f74c15e69827ee1f46edbfdc7a74f93"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.security.application-groups"
+        ],
+        "privacy": {
+          "NSCalendarsFullAccessUsageDescription": "UniDay читает и добавляет только выбранные вами личные события в Календарь iPhone.",
+          "NSCalendarsWriteOnlyAccessUsageDescription": "UniDay добавляет личное событие по вашему запросу.",
+          "NSLocationWhenInUseUsageDescription": "UniDay определяет ближайшее сохранённое место и порядок ваших остановок.",
+          "NSPhotoLibraryUsageDescription": "UniDay использует выбранный снимок экрана для фона виджета."
+        }
+      }
+    }
+  ],
+  "news": []
+}
