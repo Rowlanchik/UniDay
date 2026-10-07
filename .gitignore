@@ -1,0 +1,13 @@
+.DS_Store
+build/
+*.ipa
+*.xcarchive
+UniDay.xcodeproj/
+*.mobileprovision
+*.p12
+*.cer
+node_modules/
+__pycache__/
+*-backup.json
+profile.json
+.env

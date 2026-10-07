@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>CFBundleDisplayName</key><string>UniDay</string>
+  <key>CFBundleIdentifier</key><string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+  <key>CFBundleExecutable</key><string>$(EXECUTABLE_NAME)</string>
+  <key>CFBundleName</key><string>$(PRODUCT_NAME)</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>$(MARKETING_VERSION)</string>
+  <key>CFBundleVersion</key><string>$(CURRENT_PROJECT_VERSION)</string>
+  <key>LSRequiresIPhoneOS</key><true/>
+  <key>UILaunchScreen</key><dict/>
+  <key>UISupportedInterfaceOrientations</key><array><string>UIInterfaceOrientationPortrait</string><string>UIInterfaceOrientationLandscapeLeft</string><string>UIInterfaceOrientationLandscapeRight</string></array>
+  <key>CFBundleURLTypes</key><array><dict><key>CFBundleURLName</key><string>UniDay</string><key>CFBundleURLSchemes</key><array><string>uniday</string></array></dict></array>
+  <key>LSApplicationQueriesSchemes</key><array><string>altstore-classic</string><string>altstore</string><string>sidestore</string></array>
+  <key>NSCalendarsFullAccessUsageDescription</key><string>UniDay читает и добавляет только выбранные вами личные события в Календарь iPhone.</string>
+  <key>NSCalendarsWriteOnlyAccessUsageDescription</key><string>UniDay добавляет личное событие по вашему запросу.</string>
+  <key>NSLocationWhenInUseUsageDescription</key><string>UniDay определяет ближайшее сохранённое место и порядок ваших остановок.</string>
+  <key>NSPhotoLibraryUsageDescription</key><string>UniDay использует выбранный снимок экрана для фона виджета.</string>
+  <key>UniDaySourceURL</key><string>https://rowlanchik.github.io/UniDay/source.json</string>
+  <key>UniDayOriginalAppGroup</key><string>group.io.github.rowlanchik09.UniDay</string>
+  <key>ALTAppGroups</key><array><string>group.io.github.rowlanchik09.UniDay</string></array>
+  <key>UniDaySmoke</key><string>$(UNIDAY_SMOKE)</string>
+</dict></plist>

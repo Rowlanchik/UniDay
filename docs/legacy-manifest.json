@@ -1,0 +1,1366 @@
+{
+  "sourceVersion": "7.9.0",
+  "originalSHA256": "a1ed5ab56d393bdc0f6a132d2fafd6a93f008f618ec31c3692091a6e4c697fbc",
+  "generatedSHA256": "3fd31276451a8e34ad5e925521442652b531d9450e1b45de53917c18ad5c278a",
+  "originalLines": 3517,
+  "transformation": "Remove only await main(); and Script.complete(); at EOF.",
+  "privateDefaultsChecked": true,
+  "topLevelFunctions": 271,
+  "functions": [
+    {
+      "name": "appearanceDefaults",
+      "line": 86,
+      "sha256": "e214174d76f9b39a9ce4946a93538115503176262735a3f68748e5a14c2754cc"
+    },
+    {
+      "name": "blockDefaults",
+      "line": 89,
+      "sha256": "46d4bae4fa78b082ca2c2c5b056254e8059163cd8dd65f2ba5faa0176bf4f052"
+    },
+    {
+      "name": "parseBlockDimensions",
+      "line": 100,
+      "sha256": "758879340ab2395c065c6b57659647106e918101e9001e592267a50aa4412e59"
+    },
+    {
+      "name": "blockStyle",
+      "line": 108,
+      "sha256": "f06e6ede4d4f1c625f43a1140903ed722abeee6510392ee4e7507432e9b5ec01"
+    },
+    {
+      "name": "validLayoutSettings",
+      "line": 112,
+      "sha256": "dc1b762b47051b0d610ae3d5481af674e64d46d965ebb7e940ada44bdea09259"
+    },
+    {
+      "name": "detailedScreenCSS",
+      "line": 121,
+      "sha256": "99d97673fed471b605b2c7d8bd9a316708a15475c8bbbb55559bd8d94485efda"
+    },
+    {
+      "name": "editBlockDimensions",
+      "line": 134,
+      "sha256": "e2ada376600972daa2ffdc61151f5655354a145ff4c644670fe82adbf3549192"
+    },
+    {
+      "name": "editBlockColors",
+      "line": 140,
+      "sha256": "5af784150711f347435b4b81d2406e3e50c243fc4f58849c595972bcb5614ad8"
+    },
+    {
+      "name": "blockEditor",
+      "line": 147,
+      "sha256": "65461e6b8b1131180ceb57b9bf5b6fde9a772b9bfcb6ca3777ad2507df1a2e78"
+    },
+    {
+      "name": "fineLayoutSettings",
+      "line": 178,
+      "sha256": "e59fe4b84b62fea385b180f0f5543cb09ef6e20bb2193aec54d7bba38dea9f87"
+    },
+    {
+      "name": "sameStop",
+      "line": 186,
+      "sha256": "4826d63aaa4c3b27d35f578d45af5364b44f55427a14071cbee4730fdd9e43f9"
+    },
+    {
+      "name": "uniqueStops",
+      "line": 196,
+      "sha256": "ad6a957bc001aff020d4046cb0c8f716be27809ca9e9af67a7ffbea4ec7002c1"
+    },
+    {
+      "name": "routeVisible",
+      "line": 197,
+      "sha256": "24c83eea695f4e6fd27973fc16eefc722ce8d117775011d501397d94b9ca6070"
+    },
+    {
+      "name": "setRouteVisibility",
+      "line": 205,
+      "sha256": "e9b7fb04a31653aee66a2560db5bbda7c02052f3de6998d8af3d3fc95e3cb679"
+    },
+    {
+      "name": "stopRoutesURL",
+      "line": 212,
+      "sha256": "e014bae9c5c013adea2539038111226b91cd9416c35ccd8138e7a6988652fe97"
+    },
+    {
+      "name": "stopHeading",
+      "line": 213,
+      "sha256": "71e0eaacf840c39a876be6636dea7de0a3469432b62eb9c4d2367f774c0f1780"
+    },
+    {
+      "name": "normalizeRouteNumbers",
+      "line": 216,
+      "sha256": "4d80578f69e7972470af1d688c6562723b06b90826cda12af9406460f8c4b442"
+    },
+    {
+      "name": "loadStopRoutes",
+      "line": 217,
+      "sha256": "7cb0d3cd1c61a97c0154f33cf5cfeee3799fbb31e6bc5da15455404748740c7f"
+    },
+    {
+      "name": "stopRoutesMenu",
+      "line": 227,
+      "sha256": "6e5a2823b0303ef6291224fa16f6873d7b6633e3ddadeba94104507842a3f782"
+    },
+    {
+      "name": "refreshBusFilters",
+      "line": 243,
+      "sha256": "b646b74ea44e07b2cb1f534f5cb7e3c0a8bea35ab1595e3a871aaf7c6ccdbb7c"
+    },
+    {
+      "name": "liveStopMenu",
+      "line": 248,
+      "sha256": "8363ffc402c0baf62e4ca56415fe5102845cccab49a9549b8cf4d1e5f0800827"
+    },
+    {
+      "name": "hiddenRoutesSettings",
+      "line": 260,
+      "sha256": "591d67fc7f763fd83571d9ab0627a0e72f008586ee58e76e59d2a8963d4c2a42"
+    },
+    {
+      "name": "screenThemeHead",
+      "line": 265,
+      "sha256": "34ea36ea686e881fd456dda6caef40af35b96c0ebc4c0795a8e4ad29891fb2c4"
+    },
+    {
+      "name": "uiPause",
+      "line": 272,
+      "sha256": "c06c7f3022a98bfb0e6b02e723166599b5e769928bc8cf8999eaeb49c2170add"
+    },
+    {
+      "name": "webOperation",
+      "line": 273,
+      "sha256": "2e96d58666279092e417912e92a055f0a1dc7eefadebb7863aa9f44126cc604a"
+    },
+    {
+      "name": "logLaunch",
+      "line": 278,
+      "sha256": "f0e93bdeb1e94ff1ba969f9d8b90b12a668165b7ebd52fb9f9ed8c1dff3e8815"
+    },
+    {
+      "name": "showLaunchDiagnostics",
+      "line": 285,
+      "sha256": "06f1684163edc3f329465291f359369f24fc1466ea80d15692879a6c0f22a049"
+    },
+    {
+      "name": "overviewDOMUpdate",
+      "line": 290,
+      "sha256": "d47ef4de6e7ec58a5fe543eb1ad5c28b2cf02402b4dc9be8b8dc7f841e0227da"
+    },
+    {
+      "name": "wallpaperRect",
+      "line": 309,
+      "sha256": "f99856371f0a447908f4960b9c38ac2d0d5aca2a5f6409d98ef3f818c5588b5b"
+    },
+    {
+      "name": "drawWallpaper",
+      "line": 315,
+      "sha256": "5b16410f3d9e8bd5fc4f835b0fc5bad55e2d402a03ce2e73f2404b68f806d72c"
+    },
+    {
+      "name": "adjustWallpaper",
+      "line": 321,
+      "sha256": "9dceb7c6ab9ce8ba5af34fbe1b48da1b62c89b703c1dda039d62afc2699b1f7f"
+    },
+    {
+      "name": "editSavedWallpaper",
+      "line": 336,
+      "sha256": "3e1fb1480ccd2dabd2adaa9dc42554f06991b64f02e3c2acc5f9d1d304b0d5c2"
+    },
+    {
+      "name": "appearanceExtras",
+      "line": 343,
+      "sha256": "cd15214054ff306c6697eb6d5ff94dbe6889de6debfe5cf1fd69c6361e70e490"
+    },
+    {
+      "name": "colorValues",
+      "line": 358,
+      "sha256": "5734dc9f19da49445fc545d4c09a874e07348ba39ce7217155e124b119089bcf"
+    },
+    {
+      "name": "colorLuminance",
+      "line": 359,
+      "sha256": "f5f7a751dddeacbe3be34a2e4c4df8daa3ce94f29087857ac780bb94797c1197"
+    },
+    {
+      "name": "onColor",
+      "line": 363,
+      "sha256": "8e1990c0ae660a23997b7275ed665bae4d4025f78d738fcb3049f768c1457c15"
+    },
+    {
+      "name": "cssFontName",
+      "line": 364,
+      "sha256": "9d0067b441cada8c421466129f0da90b2ba683ee0d24a1d79237ec10d435a23a"
+    },
+    {
+      "name": "screenAppearanceCSS",
+      "line": 365,
+      "sha256": "bf93ac259706475f1a4ceee5d93ff8ddec81dd43f36fcd07f550f1aaaf9cee79"
+    },
+    {
+      "name": "widgetPoints",
+      "line": 377,
+      "sha256": "f94d3e56cddef755f53041cf9ab071e443ae985c48d5a59e8cca70a561a0d85c"
+    },
+    {
+      "name": "validExtraAppearance",
+      "line": 381,
+      "sha256": "e1f66fb9a8edd54142b869cec14d3dd313a57b40af033f5dd3f92fcef48e1c08"
+    },
+    {
+      "name": "packingItemKey",
+      "line": 391,
+      "sha256": "bd76751d79a8136600a4f9d08644ed5d87189121e7517cf3e9ec3559c825aa1a"
+    },
+    {
+      "name": "packingCategory",
+      "line": 393,
+      "sha256": "ee74852e3fe225053bfe21c46c56a5305e16d549b1fe53bf10a3d2d8277f9a15"
+    },
+    {
+      "name": "packingGroups",
+      "line": 402,
+      "sha256": "6909cab6d54774cae697b06cdfe3480d6a156fe11a6040d9bc3b10741fc5a407"
+    },
+    {
+      "name": "packingHTML",
+      "line": 406,
+      "sha256": "270211d871659f85dca30476504f18250e8c1524ec69b1cac92738a293ce4ed4"
+    },
+    {
+      "name": "packingCategorySettings",
+      "line": 409,
+      "sha256": "cf4a9d86d55e47d6b1cc5f327f472fffd69c8f413e78e2e258ed2cff5c8dafb0"
+    },
+    {
+      "name": "colorSettings",
+      "line": 421,
+      "sha256": "8f8e8b6ae4ec92ffa6e6966b511dce21ceb8b7973804ce2f13b3a8f07c22951a"
+    },
+    {
+      "name": "screenBaseTypographyCSS",
+      "line": 435,
+      "sha256": "e2c5f44ccc870fd08a24c209c3da0aa2a343a67008695a365a65c6e2e92cb2ae"
+    },
+    {
+      "name": "screenTypographyCSS",
+      "line": 440,
+      "sha256": "18a4a6b06f645a7395157b54430d59401173aec86e10525b93c2ba4a000e95ba"
+    },
+    {
+      "name": "widgetFont",
+      "line": 443,
+      "sha256": "812c4f11859f9ce1c9b53cd436b6fe9f7afadf003d2176d17002e903af6f6756"
+    },
+    {
+      "name": "validateProfile",
+      "line": 456,
+      "sha256": "850433b0a69cff375774339e8dac620a2dc56f80e8b98d8601ce5e294f95d02e"
+    },
+    {
+      "name": "resolveProfileStops",
+      "line": 463,
+      "sha256": "6ef3a00f92c4df8d50057f881424707bd0929238d55d716575cc35b5b1df5ad4"
+    },
+    {
+      "name": "createCalendarEngine",
+      "line": 488,
+      "sha256": "545aec9d3f286f4f9932ad5a43b713dbf0d099a732994b22fc9e6a112647067e"
+    },
+    {
+      "name": "pad",
+      "line": 629,
+      "sha256": "69eeeeac556c0d37477515e359d53542f2463ca6e9732c84fdd485131a6a0c25"
+    },
+    {
+      "name": "dayKey",
+      "line": 630,
+      "sha256": "96f12d03ed15c45de90616ff64374d9768cb57689bcf30708422702b8c44c96a"
+    },
+    {
+      "name": "time",
+      "line": 631,
+      "sha256": "9a20df4800cc3b94340da88d7944cac958fb7c68993f1108b3bbae41f75cf4b6"
+    },
+    {
+      "name": "datedTime",
+      "line": 632,
+      "sha256": "868ba04a6dd9138daac5d161f7a017a305a102ef9bde15a44423023fa2ae5e3d"
+    },
+    {
+      "name": "relativeMinutesLabel",
+      "line": 633,
+      "sha256": "e3c481d097d19ff6d3b37ee55378ba05ab210dfa166a940c2fa4383afd0ebf97"
+    },
+    {
+      "name": "compactTime",
+      "line": 634,
+      "sha256": "796bef58f0b51f2ea8f369c567c7e6a0e898ddf1e8341da088ed2a1a21f3d442"
+    },
+    {
+      "name": "dayBounds",
+      "line": 637,
+      "sha256": "5bf58db7406dee12dd0e1fe9857295a3c17fef100e7922ddc6a4696c8e124671"
+    },
+    {
+      "name": "createTransitTimes",
+      "line": 643,
+      "sha256": "a6d3c354f29238927cff088844a0afbd2efb7b6483e6d6ca30b51a81327f111f"
+    },
+    {
+      "name": "busQuery",
+      "line": 691,
+      "sha256": "077c8bfb45a3147ef633367c325be2dcac8a405046f38d1fcbc341e129ed27ac"
+    },
+    {
+      "name": "validateHTTPSURL",
+      "line": 710,
+      "sha256": "8ce70037731e6f1f468568b2b809a94479fadfa2d369776157f0eb4469f2b2e6"
+    },
+    {
+      "name": "createNetworkClient",
+      "line": 724,
+      "sha256": "db9e8830a28c81235676afea7543b75111df47a399e1678f5c753ef07b90a6aa"
+    },
+    {
+      "name": "loadRequest",
+      "line": 746,
+      "sha256": "2e4574e88fe0069ca5f10d5f2da485b9910fe690c225a31da3be024e18144afc"
+    },
+    {
+      "name": "refreshCachedSource",
+      "line": 749,
+      "sha256": "1f09237c34e1fe2bd9c927d3ba2886ef1a3ed8164fdbcb370de1dd734dbc2829"
+    },
+    {
+      "name": "loadCalendar",
+      "line": 771,
+      "sha256": "c37b312bbdfa621d25f3e821c428eaa33f2a1eb979a06b85d80bcd4377e25c03"
+    },
+    {
+      "name": "transitKey",
+      "line": 799,
+      "sha256": "917a2155253638e32508d7a5fa204f6b341bc5c33e4029cd7fe9700a1fa220e8"
+    },
+    {
+      "name": "transitStops",
+      "line": 800,
+      "sha256": "0e86fb05c600f21c1a859956580cfbe48f369db60d05a4e1c857169efa41290e"
+    },
+    {
+      "name": "widgetTransitStops",
+      "line": 801,
+      "sha256": "6f7e47305391535ba5c5dc05a53ad155e8129d77d745973e4709cc8ec9a2741d"
+    },
+    {
+      "name": "busCacheKey",
+      "line": 806,
+      "sha256": "ed6ffa959a016138c1380630471706d46c204074dd97eb8e78f60c2e5b026c00"
+    },
+    {
+      "name": "readBusArchive",
+      "line": 812,
+      "sha256": "caf392a47e4d750273dc09d65fa6a526bff00c5e50c0072e9ef8cb746b118dff"
+    },
+    {
+      "name": "archivedBusData",
+      "line": 819,
+      "sha256": "81cb66f33147b18d01e688fb63c96783befa7f3a9c8dfdaf4a01b77816095a63"
+    },
+    {
+      "name": "saveBusArchive",
+      "line": 824,
+      "sha256": "8a75c0b17bb4c4ca043477a3add412944a4dc9b4a1fc6bb97a3c802e7dd37412"
+    },
+    {
+      "name": "loadBuses",
+      "line": 850,
+      "sha256": "20dfd6bd7360e7431cecf29cc67cc1d98fa2b7cba5be85d3f67c625ac5bdce57"
+    },
+    {
+      "name": "escapeHTML",
+      "line": 878,
+      "sha256": "9665a4631ae63f76566551679b9797e6fcd8ef044d8dbbe0a682aaff9737d8d8"
+    },
+    {
+      "name": "weatherData",
+      "line": 881,
+      "sha256": "23ffaf96db0a70266ef2fccea9c718aed2458ed1bb799ebf529ec077c7a1ae66"
+    },
+    {
+      "name": "missingWeather",
+      "line": 933,
+      "sha256": "b9a142ec03be6aa17d2f1475efe9b6714db7402d09861bafbe4f7a78fdc47dcf"
+    },
+    {
+      "name": "weatherQuery",
+      "line": 934,
+      "sha256": "0d582fd752fb121d8fd2bcd8997080dcce8bb9120e81aa1f8aa8feae52702da2"
+    },
+    {
+      "name": "openMeteoWeather",
+      "line": 941,
+      "sha256": "7f3deb2eae8f3a1ce1ab991a94ce1c441dffdb4c6706968cf79243f97fa04459"
+    },
+    {
+      "name": "loadWeather",
+      "line": 959,
+      "sha256": "02c2aa7fcb291b2c1c7bb3166557f103cb709cd45279467aeb71909d15e6b7f0"
+    },
+    {
+      "name": "packData",
+      "line": 981,
+      "sha256": "8bf69a90da1662bec4c87d3e4ca77e01436f59670c9d23c606bf2ae6f1128975"
+    },
+    {
+      "name": "stopPriorityRoutes",
+      "line": 990,
+      "sha256": "76d574346b65fa21af9371d647fda3d7f29cffc0dbe918983be10f4f5a857fbe"
+    },
+    {
+      "name": "departureIdentity",
+      "line": 993,
+      "sha256": "899c7ffb687767b52b90708ed5df439dc7a3f86ba947eec8681faea0a43440e7"
+    },
+    {
+      "name": "mixedPriorityDepartures",
+      "line": 994,
+      "sha256": "b2b7cf5ebc668f69e7d31b3f0ed5ed459d9044524e64f84b7f62b613cd520728"
+    },
+    {
+      "name": "orderedStopDepartures",
+      "line": 1011,
+      "sha256": "76c0d26fb1ddb4bce29fa43bc19c438d7489795109cfffeef7cbcafe2b650978"
+    },
+    {
+      "name": "nearestBuses",
+      "line": 1022,
+      "sha256": "a8667799380f61905c0a6f978bf4a326993163af89b601174d45ee5b6567ba12"
+    },
+    {
+      "name": "shiftDay",
+      "line": 1031,
+      "sha256": "e47f60769ff1e51dd91d44ea2978334a6f75a3d1787877dc6c7ffab7b31fb5c8"
+    },
+    {
+      "name": "weekBounds",
+      "line": 1035,
+      "sha256": "cbefb9f69361b2e884e2bb63ccaca1c4ece4436ebf30c50fbfd576a0eca29a44"
+    },
+    {
+      "name": "isoWeekInfo",
+      "line": 1040,
+      "sha256": "bda7cba383489f0189608482ccb2ec24f03b9bf8a3650ff2435bdab7d18c6fb9"
+    },
+    {
+      "name": "wallDayNumber",
+      "line": 1046,
+      "sha256": "db0210c8b71a7c34190de0601d46bb4090f2d61994dafa885fe7ca990aa71413"
+    },
+    {
+      "name": "studyYearBounds",
+      "line": 1047,
+      "sha256": "de3153808799384c1848b19c702dbe2ba165750686b9565a09575810e761adf8"
+    },
+    {
+      "name": "studyAnchorDate",
+      "line": 1052,
+      "sha256": "81441f206a8c32306347c2860534880c628816fb56a0da1911e6731e16f4560f"
+    },
+    {
+      "name": "studyWeekBase",
+      "line": 1057,
+      "sha256": "8af1e806d07d9805fe315d1b9b8c0c920ca956dc43f92bfba96bf3e45f179b52"
+    },
+    {
+      "name": "studyWeekOptions",
+      "line": 1065,
+      "sha256": "243f618972d2900a2e85e3ee7014dec80d2a496dde26c085ab1518fa90fb996b"
+    },
+    {
+      "name": "studyWeekNumber",
+      "line": 1071,
+      "sha256": "0d8a69b5f40c6b1d2c16e6628fa775f9a5fae85018335a485c4ec5506ef68f44"
+    },
+    {
+      "name": "studyWeekLabel",
+      "line": 1075,
+      "sha256": "d7422a6b1c07c9c701e483e97180fa7a8990457472826fa77ff3837ae056e310"
+    },
+    {
+      "name": "studyWeekSettings",
+      "line": 1079,
+      "sha256": "3ed691f85cc5e763781f4a096eb9dbe89e4073e6c6bde46817f0fa5d184c9995"
+    },
+    {
+      "name": "createLessonClock",
+      "line": 1089,
+      "sha256": "7e3cec31c61c4e0a25e0e38138d03e848a88cb2d36fd323a3ea31c9cd69f1294"
+    },
+    {
+      "name": "distanceMeters",
+      "line": 1107,
+      "sha256": "7bd6a6ca083d698a7f36889cebdc2ca3e7edaf953c83decaa7af12b2de604bd2"
+    },
+    {
+      "name": "validLocationAnchor",
+      "line": 1112,
+      "sha256": "49e711d0affcbb5aa952cfdaddc740749d1c9e16c1f34926b408698acf16d3c4"
+    },
+    {
+      "name": "locationZones",
+      "line": 1115,
+      "sha256": "1229bb9026ad7b02357807e319753124c85ae712eaf96087fc78a1cd3c75c551"
+    },
+    {
+      "name": "locationSourceKey",
+      "line": 1120,
+      "sha256": "9756ef49740458f054357dda003ba2bd8269f88f2fd0a6c658e2b62aca519bc2"
+    },
+    {
+      "name": "currentLocationFix",
+      "line": 1121,
+      "sha256": "2d6e051281f074871bd1e2221a14e605d62a98910114251976a496ac0853d12a"
+    },
+    {
+      "name": "locationSide",
+      "line": 1129,
+      "sha256": "9df570c6eb7d30beb6895164d0b5b738ba62113812cdafe3c3d0baa0fb759d65"
+    },
+    {
+      "name": "locate",
+      "line": 1140,
+      "sha256": "b71b21ba0c5f259eb5bc6bf145541d36548ba5e73869bbdd9d82eb950b083586"
+    },
+    {
+      "name": "eventIndex",
+      "line": 1172,
+      "sha256": "10c945d0e85f800bb2b49fbda47b6a56bc06e365288af039ebd5a8f19fdf5086"
+    },
+    {
+      "name": "createPersonalEvent",
+      "line": 1178,
+      "sha256": "b65c71a76021b312a91c6954f0ed8fb5d5c9e6503b451092cce48cae0a274ea7"
+    },
+    {
+      "name": "personalEvents",
+      "line": 1185,
+      "sha256": "eb9fabeefae1235afef3aee982c224b1dbdeaea48672f49fa889087362a14142"
+    },
+    {
+      "name": "actionURL",
+      "line": 1193,
+      "sha256": "0cde019e0b729f070ba9c85afd543bd1f6fe266de468d77d551d36892ef18e55"
+    },
+    {
+      "name": "readPacking",
+      "line": 1200,
+      "sha256": "d490a1a07412c3c73430d75bb8a9d82875050aa1b863a7975a2d0125de5377bd"
+    },
+    {
+      "name": "editPacking",
+      "line": 1207,
+      "sha256": "75709794caac3541329308821892a93153868cf0569901e1702d55feaa826f66"
+    },
+    {
+      "name": "choosePackingDate",
+      "line": 1222,
+      "sha256": "c0ab1755a336e06ea197ab9aabf62e17b2740705784d83891846c99f8d1cf669"
+    },
+    {
+      "name": "chooseWeekDate",
+      "line": 1235,
+      "sha256": "c1147e09ce8151178aeec675f3e0ecaee6761c72c01fb283e9bbbe9a6fde33bf"
+    },
+    {
+      "name": "lessonEditURL",
+      "line": 1246,
+      "sha256": "aa9f99ea0cb75873653318527328a05aa1786d6243092e0f0ba829c8db106aeb"
+    },
+    {
+      "name": "courseEditKey",
+      "line": 1247,
+      "sha256": "5b964bb5f26771b22a7beaaf603d3c4005aadab15360cb50f43e8f16622c14ff"
+    },
+    {
+      "name": "lessonEditsPath",
+      "line": 1248,
+      "sha256": "30f19d4a97fe308dede1c4cc81231f5b44df9038d1d0bcaa26b92fa597f1f612"
+    },
+    {
+      "name": "readLessonEdits",
+      "line": 1249,
+      "sha256": "977b6b87cdf0148b62a13bdcfb34fb0a254068caebbbdab17bcf07ef930b81fd"
+    },
+    {
+      "name": "applyLessonEdits",
+      "line": 1259,
+      "sha256": "e738f42b215c13365ae3c9880dc7e9ca8cb25261ae1367fb3da4f6cb415df3ac"
+    },
+    {
+      "name": "refreshEditedModel",
+      "line": 1272,
+      "sha256": "be6ed0f0bac69a8299b301212aa289d6603b22e6c770f02abcf2f50cf3dd9803"
+    },
+    {
+      "name": "clockMinutes",
+      "line": 1279,
+      "sha256": "f3147b3e9b2a55d12f730d7a8ef3da1acaaa32dba89adba07aabf3605797f827"
+    },
+    {
+      "name": "editLesson",
+      "line": 1280,
+      "sha256": "e75dc5f57f326887d54b24e2c20b65f027d7959a3bf427310ed7f101c0d7e2c9"
+    },
+    {
+      "name": "restoreLessonEdits",
+      "line": 1294,
+      "sha256": "357a32f89bc41f20f3b19287160144811475b66e7581bb477af3c58cd17a4bb2"
+    },
+    {
+      "name": "breakHTML",
+      "line": 1301,
+      "sha256": "aa14cbeb0a9086b040ca6f2dffbbeeef2fe4bd67c000edfb951c58b9eeced171"
+    },
+    {
+      "name": "liveBreakUI",
+      "line": 1305,
+      "sha256": "758ebdedcb4d60d4c9369c156cf770a5200807df1b882b7abf66f96b6032e76d"
+    },
+    {
+      "name": "liveLessonMenu",
+      "line": 1316,
+      "sha256": "f1f001499fe673efa39403a901dfed9e1f9835e7518c10b85bbc55e9e4172a8b"
+    },
+    {
+      "name": "liveSectionOrder",
+      "line": 1326,
+      "sha256": "bdab62ced39f82de1782050d7b651c36e5bad5511a83ca4d7ef17f97aab50cd2"
+    },
+    {
+      "name": "courseTitle",
+      "line": 1334,
+      "sha256": "b138f4615764372b5b607729e5a8bff1c24f91983542aaed1e3f6bf26d685905"
+    },
+    {
+      "name": "lessonRoom",
+      "line": 1335,
+      "sha256": "55dfe21c4165745dea708660e962263cbf6d03be6cf1b8a769fc2439202780bd"
+    },
+    {
+      "name": "lessonNoteKey",
+      "line": 1339,
+      "sha256": "1463d4c3a7c0943051b1984d9d245422f987f2f3e858938cd4e2ad3cf38a2889"
+    },
+    {
+      "name": "courseNoteKey",
+      "line": 1340,
+      "sha256": "f66e626c182272f52c92e0f2ea4648d498e5970846604ef4416b1b46153d3209"
+    },
+    {
+      "name": "lessonNoteRef",
+      "line": 1341,
+      "sha256": "1ab361565a5b9e91033f2db679ba3c5b67994168a6517b1aff9690c47ae0857c"
+    },
+    {
+      "name": "lessonNoteURL",
+      "line": 1346,
+      "sha256": "4f450481e8085e48a769ca221c1fe538c13c0d8ea29b8a782ebe7ccea17acb0f"
+    },
+    {
+      "name": "readLessonNotes",
+      "line": 1347,
+      "sha256": "dcf2b98a929ba3b3ed5e34673aa361484b66ad339ca3af1e355c5aa38ed3c528"
+    },
+    {
+      "name": "editLessonNote",
+      "line": 1353,
+      "sha256": "dee30c9fe502a725a90062179de90e32255de5ae80599e396b8f602449c8f328"
+    },
+    {
+      "name": "busTripSelection",
+      "line": 1374,
+      "sha256": "34304c228931611b4310356f17b9ab23717cd25d9cb343866f4c53f4b684dcbd"
+    },
+    {
+      "name": "busTripURL",
+      "line": 1378,
+      "sha256": "0fc847a4b0b94bad55a066e4beb05662f38c9722f474192d7af574d0ee0c0985"
+    },
+    {
+      "name": "parseBusTripSelection",
+      "line": 1381,
+      "sha256": "b10199d361e6d0c8795a84af42736de934ad884966f2f4f7b0345ac07fa39add"
+    },
+    {
+      "name": "busTripQuery",
+      "line": 1389,
+      "sha256": "e29cbd46cfdc195d771d3e6d0308137c8c74eac7c2883d03d241f2b69825adcd"
+    },
+    {
+      "name": "loadBusTrip",
+      "line": 1395,
+      "sha256": "8e71782a6461af047cbe6d10adaee1bed476acf2592b8cfec738fa8edbd283e7"
+    },
+    {
+      "name": "renderBusTrip",
+      "line": 1412,
+      "sha256": "5219f976d09b1a9190b9ae88581204dfedf99616345836b5461dbe52c0845071"
+    },
+    {
+      "name": "weekHTML",
+      "line": 1429,
+      "sha256": "b664554631871ed0ebe6bb56eeafee6b10b17a3081c67d5cbca58c958478397f"
+    },
+    {
+      "name": "lessonCard",
+      "line": 1437,
+      "sha256": "ea3e55e2745f40559d985bd09d5b8dd161058191086ce07a0e96e79b592fe2c0"
+    },
+    {
+      "name": "liveLessonUI",
+      "line": 1454,
+      "sha256": "5da738cf66908aad53d360fd0715ae52282f607aa5602bcd16a903fd2a9f28aa"
+    },
+    {
+      "name": "stopBoardURL",
+      "line": 1481,
+      "sha256": "3e839eaf1c99dcef3386e72348d2d6021aa46bce799fb6f3b280d68f5ff2f86e"
+    },
+    {
+      "name": "liveBusUI",
+      "line": 1482,
+      "sha256": "d197e201529d3bb3d44234e4232bfddb43d1947d0b9eadde60a9c7ad0cd53f8b"
+    },
+    {
+      "name": "stopBoardQuery",
+      "line": 1502,
+      "sha256": "d91032dc6be7f6ac6221b4f3956fb92d19c9dffd5106a794482b2b5eb8f48529"
+    },
+    {
+      "name": "loadStopBoard",
+      "line": 1508,
+      "sha256": "587bb6958a8c3eb3cf26212e1e488dede66d110d239d38aba7e54f66ee0990d8"
+    },
+    {
+      "name": "renderStopBoard",
+      "line": 1527,
+      "sha256": "92325eaf09905577231ba389be3f773b125d4f030e758c00ecb891c7de501016"
+    },
+    {
+      "name": "settingsPageParent",
+      "line": 1543,
+      "sha256": "b365a99379b809a074443fd29fe363ae75ea99c4d7e2aa894078c304728c056c"
+    },
+    {
+      "name": "renderSettingsPage",
+      "line": 1555,
+      "sha256": "39c827f06861e9a4c7ad87520b3557f2be96d7432412be366aedd0a5a763d78c"
+    },
+    {
+      "name": "renderHTML",
+      "line": 1645,
+      "sha256": "91553a50b37b9b174174959bb2633277261d69679f5d0715916d214c5c3c3c1e"
+    },
+    {
+      "name": "clearLegacyNotifications",
+      "line": 1750,
+      "sha256": "0b946b692deef9d2381d7d1e576f5b21176c8fa396c0bc6c9ee3bd5456fa18b9"
+    },
+    {
+      "name": "readWidgetWeather",
+      "line": 1761,
+      "sha256": "e2925e72dfb492ebe7332866738c3190ef0dbb0317ac88279c40c6570a2922a7"
+    },
+    {
+      "name": "nextWidgetRefresh",
+      "line": 1770,
+      "sha256": "392c734c75433c030f254f27190ef3482a051364f5af2674d139b58dd7836ed3"
+    },
+    {
+      "name": "widgetFamilyKey",
+      "line": 1779,
+      "sha256": "9059cdb9ea8f427aa2419273849c6014a740ec41f73df73e3ed2b29f36dcb9ce"
+    },
+    {
+      "name": "widgetBackgroundImage",
+      "line": 1783,
+      "sha256": "89d7f82a96dce2298e589b5e40a2b2e0b189ed11bfa795bbeb4f1b88da20f466"
+    },
+    {
+      "name": "applyWidgetBackground",
+      "line": 1791,
+      "sha256": "e41075c35672f3f480c163f6297151a6f5d54e25bd486935d2f7388025d5e0e2"
+    },
+    {
+      "name": "widgetDimensions",
+      "line": 1801,
+      "sha256": "61d5504403e9b7eae653f96eb6936d11c494c8cb6c8e2e3aa094841c1a17389d"
+    },
+    {
+      "name": "widgetPlan",
+      "line": 1808,
+      "sha256": "cc10d22851ff1a98684e0d2e6c6fdb020ceb4ce3b41236b0a3e617214e1a2da3"
+    },
+    {
+      "name": "buildLargeWidget",
+      "line": 1905,
+      "sha256": "63fcc3790b907e2182f1008000e3c3cb0e5c1a64853e9aff1fa2d62b7baec4ad"
+    },
+    {
+      "name": "presentInteractiveOverview",
+      "line": 1939,
+      "sha256": "ddbcf7d458fa207c1f251cf70bf45cf593d2856664c10ea1fcbc7d22969f57e8"
+    },
+    {
+      "name": "courseKey",
+      "line": 2132,
+      "sha256": "02b7f8adb5f2a2d982f762f0718f53d27a216786c6d3bc9e266d15e08e119546"
+    },
+    {
+      "name": "profileFiles",
+      "line": 2133,
+      "sha256": "537a3d0be8599a3100546274f1b0279e24d43d42276dbe4df4ddcce54ed5c745"
+    },
+    {
+      "name": "currentProfile",
+      "line": 2140,
+      "sha256": "8aba2595347e207e69a7f3f5d4d740c4e40ac998e715991bd9696fb07a68d6f0"
+    },
+    {
+      "name": "profileDataSignature",
+      "line": 2143,
+      "sha256": "b8d529b733bbddfd8aa2930b5a65ba1324b18aa04e4ba0f4ef0bff68751f8ab4"
+    },
+    {
+      "name": "overviewSignature",
+      "line": 2148,
+      "sha256": "9a6ce0d71d6757794a42cfcb6cc5b4392ad12483fdc7a12fb74ad5d6a3b56c4e"
+    },
+    {
+      "name": "normalizeWidgetSections",
+      "line": 2149,
+      "sha256": "d70a53d8a65862a4487b7fb060236f08833a5f6e78c1236436f985eb81c80288"
+    },
+    {
+      "name": "applyProfile",
+      "line": 2160,
+      "sha256": "731a981ee020be30494f144d09daf6c6b8890ea2d9144f82e2ba837c5c5819da"
+    },
+    {
+      "name": "profileEnvelope",
+      "line": 2264,
+      "sha256": "ece50807c787e20af4df679a296bdd9a4b9fe2569a3b232fed0c66bde4e00655"
+    },
+    {
+      "name": "saveProfile",
+      "line": 2273,
+      "sha256": "36a85be8943fab5fe20d4fbdc3cb745b4b45987c25d1b78194f5d51f9ef53634"
+    },
+    {
+      "name": "importProfile",
+      "line": 2284,
+      "sha256": "40075747089be944f90f6496b66cefc0cf6b9ee5eefd855183c8ed9fd4d97a62"
+    },
+    {
+      "name": "firstSetup",
+      "line": 2297,
+      "sha256": "558647d1f8b6c0189dca9232ba8d1877110de67738360a54279c8c8cd7871d4a"
+    },
+    {
+      "name": "setupMessage",
+      "line": 2304,
+      "sha256": "0657316778d99812f0d2726b7a0187644b84fe8496a4cadecdf4c9db92acaefd"
+    },
+    {
+      "name": "setupInput",
+      "line": 2307,
+      "sha256": "3a3f056c779f1e1b93b3df237dc48b5d800953f6c3e6d66a692ce7523b789246"
+    },
+    {
+      "name": "setupChoice",
+      "line": 2314,
+      "sha256": "06f67c7c51f31fbbe1403f3b35e8ea2ee6c68b427bb415128d9063a30b0be817"
+    },
+    {
+      "name": "setupCalendar",
+      "line": 2328,
+      "sha256": "f1e81419f7dcc311b7e2715ec56d7d5f86350b66459fe0870ce603c5c4b353b5"
+    },
+    {
+      "name": "copyCalendarKeys",
+      "line": 2343,
+      "sha256": "d35dc6f6fb3610a7e8d633b3ce5d292899443a3825cd76a096f93e32335ea109"
+    },
+    {
+      "name": "replaceCalendarSource",
+      "line": 2352,
+      "sha256": "b3adbd1b1a04340f341f0ddf487ca24030efa6f9088ee786ba2c1a5fb36d93a2"
+    },
+    {
+      "name": "replaceCalendarLink",
+      "line": 2366,
+      "sha256": "d181deaadff05c5da909a4856c94ffa2cebde3d133180f68f0faccbc626dc974"
+    },
+    {
+      "name": "stopCityKey",
+      "line": 2370,
+      "sha256": "c661b208e8c751fa65028ae930fb9e5e60efbc0c7815a2aa938166d7c7a834cf"
+    },
+    {
+      "name": "stopIsInCity",
+      "line": 2375,
+      "sha256": "f950baeec8278aea45973e4899a53b8ea82bf1e49dae67958e12979d960dc00d"
+    },
+    {
+      "name": "loadStopPlaces",
+      "line": 2381,
+      "sha256": "e6c849ad44d26b5cbe9d47bd9106d72ec77abc273fb5efd5baeb0220b724a68b"
+    },
+    {
+      "name": "searchCityStops",
+      "line": 2399,
+      "sha256": "1c3ea1ed04d50469cb14fab3cf5baea57c6b01bdde148322c87ab623cf7e5869"
+    },
+    {
+      "name": "setupStop",
+      "line": 2414,
+      "sha256": "caf7fe450ce7d81b250fff2f69df9dfa42104210e11f02c9380d9706e8f16dfe"
+    },
+    {
+      "name": "splitThings",
+      "line": 2435,
+      "sha256": "4f704c763bafe53d90dc0d960aa7f8c551438b5dd6588c797b896481088d2daf"
+    },
+    {
+      "name": "setupCourses",
+      "line": 2436,
+      "sha256": "c9c7d04ab6755f48f23d20f1ac06366ae6bea37b614e48f124a84354a6f5eafb"
+    },
+    {
+      "name": "courseIsConfigured",
+      "line": 2439,
+      "sha256": "b5c6a41629ba8dd79a5b6791b80af004cebc94961c6ff810bc25ab397773129e"
+    },
+    {
+      "name": "discoverNewCourses",
+      "line": 2444,
+      "sha256": "f9068896c4bb43f6c071af4274143b01812b7d25673fa9d0c1c227498066ce12"
+    },
+    {
+      "name": "setupNewCourses",
+      "line": 2451,
+      "sha256": "4e9dab442e51f2a056fe4ea0561c13d650cfa030b4a2b837f2765b4178abd4a8"
+    },
+    {
+      "name": "setupOneCourse",
+      "line": 2461,
+      "sha256": "f1aa18ae0783499cd83c0f6c022ea2a3e9d3e2e470cd26e8e7897b41081801cc"
+    },
+    {
+      "name": "setupWizard",
+      "line": 2474,
+      "sha256": "50bbdcc6c94fed19e78ce475db9cc2c91532b822af692ac009d6ea54098660e1"
+    },
+    {
+      "name": "fontLabel",
+      "line": 2504,
+      "sha256": "661193d1cdf7ccbc1ebe65e3dc0bb074fd8aef363ac4ae946bd185ea8d977fc8"
+    },
+    {
+      "name": "chooseFontSetting",
+      "line": 2505,
+      "sha256": "85f5fde369f48605090d872d4754e2a437fcc54011f43cc621de320f267ed5be"
+    },
+    {
+      "name": "editWidgetSections",
+      "line": 2519,
+      "sha256": "ebe3a8507f13614164d0f0568f629fe6363c608c325b01c20ba9ae92d2542e84"
+    },
+    {
+      "name": "missingPlaceAddresses",
+      "line": 2535,
+      "sha256": "3262ee30100274140d4c157ca3bb0c67f688ce2e0816fcec9831ff5b42662738"
+    },
+    {
+      "name": "setupMissingPlaceAddresses",
+      "line": 2538,
+      "sha256": "0fab1776013b78157460916d03880a3b44ebae39774e22b764dfd75c3bc29c0a"
+    },
+    {
+      "name": "nextChainKey",
+      "line": 2545,
+      "sha256": "d062a15b61fe209ee92714ef3fae83cd1c6de99a4bebac64033cd83c8636d6aa"
+    },
+    {
+      "name": "createTravelTemplate",
+      "line": 2546,
+      "sha256": "bad1a5a28f208ad0f83584f37f282f3cee4c5b8aeb516a7dc113b74f580bdbb3"
+    },
+    {
+      "name": "defaultMediumColumns",
+      "line": 2559,
+      "sha256": "ae5c4a43a6b64425d852e2df6a12bf3c9601d6f5b41c483181d81bd2287836b8"
+    },
+    {
+      "name": "mediumLayoutSettings",
+      "line": 2560,
+      "sha256": "c77101d8870521a7b73709ff95f6732d7f95c97852c4988c1e817ebe8c9ad6d5"
+    },
+    {
+      "name": "chooseJourney",
+      "line": 2573,
+      "sha256": "d35a45f805435142b41e72861afc75bd33866a47c086036ddd912099652d181b"
+    },
+    {
+      "name": "journeyQuery",
+      "line": 2591,
+      "sha256": "fa255cc6f922d59c3d04d30d1c61f3dd68c3ce3db9373c1622d70baebc617e8e"
+    },
+    {
+      "name": "journeyResults",
+      "line": 2595,
+      "sha256": "af51c60c38da484220c98d812b8fd00316ae7c75b84139351b2ae20b31aee116"
+    },
+    {
+      "name": "loadJourney",
+      "line": 2614,
+      "sha256": "cf7f8fcc74be1dd72783374247ec63d31f2e45e9d20a8d22b6c66de4847f82f3"
+    },
+    {
+      "name": "renderJourney",
+      "line": 2619,
+      "sha256": "1a50134c7179ecb46f0d5ab235a42436cf03800f31b2b0bcf756f970b0fcee73"
+    },
+    {
+      "name": "placePoint",
+      "line": 2631,
+      "sha256": "9f3f0758c8d6e39dc2c9363ec7f3b216c2807eaa6d3e75c58ceb556c540c889c"
+    },
+    {
+      "name": "directionName",
+      "line": 2634,
+      "sha256": "204d0a3bd72964a0a22e10dd6d9fe8b48ecbf35cc0538254945778f39bbdb6ac"
+    },
+    {
+      "name": "stopDirectionName",
+      "line": 2635,
+      "sha256": "f2c62ecb44e843721a440e60126a79fdd325bccd91debd57033eb6247e42dac5"
+    },
+    {
+      "name": "chainName",
+      "line": 2638,
+      "sha256": "97592440f94c2e449f0d188bd503aa307d6810bfaae2c9c0b5148fc3969ba799"
+    },
+    {
+      "name": "activeChain",
+      "line": 2641,
+      "sha256": "62eb5d4a9181ef7a0c79e2db4a4dc1b4a50319d85c819dd0d1af45fac818e5bf"
+    },
+    {
+      "name": "activeChainLeg",
+      "line": 2642,
+      "sha256": "0b58ff74d76bc70611a43edd90d02d82d40da65090eaa16a75dfd1432d1ebdac"
+    },
+    {
+      "name": "validateTravelSettings",
+      "line": 2646,
+      "sha256": "74a8573a81d90319ca1f135c1dc2b405e8c6e30de68ad13f01fb766d9946c86b"
+    },
+    {
+      "name": "choosePlaceKey",
+      "line": 2657,
+      "sha256": "cdf97757970fefde4712f1c95e09c044ab3a972f10b6453814e6538de571a0f8"
+    },
+    {
+      "name": "configureChainLeg",
+      "line": 2662,
+      "sha256": "739dfe04cfe4d1f1703bb307a0171bf6a4f16fa2afe27950b9a30e44f24a1f98"
+    },
+    {
+      "name": "appendChainLeg",
+      "line": 2671,
+      "sha256": "37bc7b1aebb75279d4c5ba8ecf13d07216a5a945caed64cc7385b1e22ded31e3"
+    },
+    {
+      "name": "replaceChainSequence",
+      "line": 2680,
+      "sha256": "2cd48c70f440342569d06e20c9ed001476d6f6e2cc8be329edd14f2987584180"
+    },
+    {
+      "name": "editTravelChain",
+      "line": 2688,
+      "sha256": "7249b8f1d9b91ed27ff5f02e7c02124ddd0e1078891e8e8c9f19a4be4bcb4656"
+    },
+    {
+      "name": "journeyPlannerSettings",
+      "line": 2703,
+      "sha256": "299b22112bef2c25fab8bd338b39471232fd0083064e626a652fce9b68ef6fa2"
+    },
+    {
+      "name": "travelChainSettings",
+      "line": 2711,
+      "sha256": "c6a9df30deb54b2c5cdf5b19f9303af12f5ca827db8736962a718b3840b131ba"
+    },
+    {
+      "name": "placeKeys",
+      "line": 2723,
+      "sha256": "a2990a84ea2afb8c7e580be4b8fa340c2d018974c1411328f709647674a78aa7"
+    },
+    {
+      "name": "placeName",
+      "line": 2724,
+      "sha256": "2eefe1f18ab35bb65b618bf5ecd3bafcca71de9943c2a6294bf51b5fe54bda76"
+    },
+    {
+      "name": "configuredPlaceStops",
+      "line": 2725,
+      "sha256": "13b9ece6197d7872b7b47652e7bc0fc9a8bd79b7cba41fb40f5b43a9a243a5b0"
+    },
+    {
+      "name": "setPlaceStops",
+      "line": 2728,
+      "sha256": "1a2e3bf0b37e945e841b4f69d9a9174364a371ef924d66918a572c80138fa06d"
+    },
+    {
+      "name": "placeStops",
+      "line": 2731,
+      "sha256": "aef7de00d75011257a6b3b22510d3ffafeeb527039898ba899f396df41375277"
+    },
+    {
+      "name": "safeOriginStopKeys",
+      "line": 2737,
+      "sha256": "087f6b30444eb9a8ead8ee2abf2769d0a112b65b58892cc7c1f8361ff1e155dc"
+    },
+    {
+      "name": "placeOrder",
+      "line": 2749,
+      "sha256": "7695e79a53be1a1ac27f5c7bfdc82d577c9f22034a2dec1d76503e6caadf01bc"
+    },
+    {
+      "name": "setPlaceOrder",
+      "line": 2750,
+      "sha256": "45c2f76bd20c8dca28b3065d0071865964261cf6e2e08ba18d60ce997c5caaf8"
+    },
+    {
+      "name": "effectiveStopKeys",
+      "line": 2751,
+      "sha256": "d7a80dfbfdeebafcd0d9a0bb2690de352b7edfd87ba31b5559185f69dd311385"
+    },
+    {
+      "name": "normalizeProfileWidgetOrders",
+      "line": 2759,
+      "sha256": "da50c5764094f5bc0524889d1fa44189e9e83af4132acc5d5b396678a2329471"
+    },
+    {
+      "name": "placeStopSettings",
+      "line": 2769,
+      "sha256": "e5108f410987bd040776f389b6322652f416d766e920c391231736f25244d32f"
+    },
+    {
+      "name": "editZoneStopOrder",
+      "line": 2781,
+      "sha256": "fbd05f8a016add5f2f4f36ca8693679cf287225c473aef81c58013d8e3fbb637"
+    },
+    {
+      "name": "chooseAddressPoint",
+      "line": 2787,
+      "sha256": "67f72c01d3a8869067fe9a94dcf2881825a0ecdf68c125d723b515c234f936b0"
+    },
+    {
+      "name": "placeSettings",
+      "line": 2794,
+      "sha256": "d5f4e9d0bfd565c6a404b06cf57a2bc666a59f4ce3986558c5d403b0eeed9eba"
+    },
+    {
+      "name": "locationOrderSettings",
+      "line": 2808,
+      "sha256": "a7ece5efe50158a0e93c8c6657ff77ff1df5370aa01ed04ecf909e2b6bfe2b48"
+    },
+    {
+      "name": "diagnoseWidgetLocation",
+      "line": 2822,
+      "sha256": "49459995055ae23b5c10798dc56995e8598b01ed145d48aa494768c0fecc76ab"
+    },
+    {
+      "name": "captureLocationPoint",
+      "line": 2836,
+      "sha256": "7c87b9acbf3f0c69ce928d0937f4dbaafe97d6eec29b96ab2963e37e71d1a8f5"
+    },
+    {
+      "name": "readPackingChecks",
+      "line": 2846,
+      "sha256": "323a63c87af6b9273d85146032967b4cee730de169e87add5adaab438d8c7efb"
+    },
+    {
+      "name": "packingCheckKey",
+      "line": 2852,
+      "sha256": "494df75d75c4fa3b35f0e1a36e98b12f8182a1839eb0cdbb98468c46e8e930dd"
+    },
+    {
+      "name": "savePackingCheck",
+      "line": 2853,
+      "sha256": "1ecf9b60fff4b9ecd38076ea37a3a7cf3607732fc19d25c7f06e79f70357e2e3"
+    },
+    {
+      "name": "visiblePackingItems",
+      "line": 2859,
+      "sha256": "f91bb52f5d797374793b576feaa536d5c562b263b1758c76292faef3491f9ff6"
+    },
+    {
+      "name": "livePackingUI",
+      "line": 2866,
+      "sha256": "7ad1fee5df26974800586f03a9d39e1187316418bc9f34fed43101cfc93b55fa"
+    },
+    {
+      "name": "handlePackingCheck",
+      "line": 2871,
+      "sha256": "69fd4b4f49919238d8f5b188e9d2fc799dea039bace2555a5c229c532c4687c1"
+    },
+    {
+      "name": "searchAddress",
+      "line": 2887,
+      "sha256": "6a344a147c33304fcc5a977060152b623f2e7613eed1ef12d2504059da7f77f7"
+    },
+    {
+      "name": "anchorLabel",
+      "line": 2898,
+      "sha256": "5aa35372d95619928a02b1ae18271ca3ddcadcae0fd17f4d0c8b436f5266f713"
+    },
+    {
+      "name": "editLocationAnchor",
+      "line": 2899,
+      "sha256": "3e3a6e0821a4e56ddffe982392670fdf5af4281b193e20620d6fc82d713e0503"
+    },
+    {
+      "name": "editWidgetStops",
+      "line": 2913,
+      "sha256": "18fdb26ca1dcc3864601c2578f7b8ea175a64cf9d6f971b8c1973873faadb304"
+    },
+    {
+      "name": "editWidgetCustomText",
+      "line": 2938,
+      "sha256": "622b772ddbb6f3cb5bfc5f85545f3182792934645fd24f8444004f9872e4bcec"
+    },
+    {
+      "name": "cropWallpaperImage",
+      "line": 2981,
+      "sha256": "54fef90e27b12e65887d9f68c6959df44ccfb662bfbf514aba9e3b86d7baeaed"
+    },
+    {
+      "name": "manualWallpaperRect",
+      "line": 2982,
+      "sha256": "4d8ed78e992d8a1bdaeaac7701ba6ff8faef59736d87c136b4961527524fa431"
+    },
+    {
+      "name": "setupWallpaperBackground",
+      "line": 2987,
+      "sha256": "880991c03a753f989f9fb617e80f04e054387bef76d36c3e8688b40a6f2ddf3a"
+    },
+    {
+      "name": "backgroundSettings",
+      "line": 3009,
+      "sha256": "4aba39e5946145aba449c7d5726f729891f4b46623466a6d7e8877d4eb533f4e"
+    },
+    {
+      "name": "effectiveWidgetSections",
+      "line": 3020,
+      "sha256": "18700d5cf15f8c74f5bbda0574016e22282cca6f2cc80a48e7a3f5f81660a89f"
+    },
+    {
+      "name": "visibilitySettings",
+      "line": 3021,
+      "sha256": "07c2bebc8cc8b86c188e18d5625bc9bdd1709c54cc3f26dd36ea2f3926cf1bf2"
+    },
+    {
+      "name": "numericAppearance",
+      "line": 3037,
+      "sha256": "7ebe4902f93c0a3e800d53ffeb2c225e7c7cfc0a230c0eaa7633d06b3953468e"
+    },
+    {
+      "name": "screenTextSettings",
+      "line": 3041,
+      "sha256": "c2ec4f81156bc24274d89bb34d4568b8bb88f2973e6a038c8fd81918032e92ab"
+    },
+    {
+      "name": "widgetTextSettings",
+      "line": 3050,
+      "sha256": "096541a5b76f57a4b63cd7bda3532a96ba1fb436c1c52a8350ce72aad9ad30de"
+    },
+    {
+      "name": "previewWidget",
+      "line": 3063,
+      "sha256": "30375639a5131dd4e7e9276539f2acb05bdf9bcf08a21de403e5c442f130328a"
+    },
+    {
+      "name": "appearanceSettings",
+      "line": 3070,
+      "sha256": "61bde581938ddcc32798a01f01af49c4754753e74554d1cc735de567d6e62efe"
+    },
+    {
+      "name": "profileSettingsMenu",
+      "line": 3089,
+      "sha256": "6de5d5b22028ec5441a7b77a99c56304b7fe81f9dbf6485d9b1491b9adec2b98"
+    },
+    {
+      "name": "settingURLValue",
+      "line": 3101,
+      "sha256": "e7d87c8dcead548668a981960da23d4c4359f542afba2e916608cc925ac38f5d"
+    },
+    {
+      "name": "removeStopFromProfile",
+      "line": 3102,
+      "sha256": "cdd7faef46f8bfec8dab6c1dd7fdf123a7e044726f1a4e429a7061cfad4a1191"
+    },
+    {
+      "name": "removePlaceFromProfile",
+      "line": 3110,
+      "sha256": "252d9627850699f5da02fa4300272a87218265489c42c3b9282d375d4912f4da"
+    },
+    {
+      "name": "settingsPalette",
+      "line": 3120,
+      "sha256": "08cbfde66ae07e996ea864297dd1479f7050153b4892b47e82bf39517c400212"
+    },
+    {
+      "name": "editSettingBlock",
+      "line": 3131,
+      "sha256": "f327fc470c6ac360fab824a21874bc8871f21727592e5c947f290fcf9ae9bfa4"
+    },
+    {
+      "name": "previewWidgetFamily",
+      "line": 3149,
+      "sha256": "228de5ab38828a74250c40ee3a0f55d46b9269acd87c22d7aeac2b82dda0f14c"
+    },
+    {
+      "name": "performSettingOperation",
+      "line": 3155,
+      "sha256": "5e26574be58ef841d7300e60ca4cdf32077ab2097af5f90413224a80b7f873e4"
+    },
+    {
+      "name": "editStopPriorities",
+      "line": 3292,
+      "sha256": "06da648813fd2aa7eb2478a0ba02f0d242dbb98e38777cbd12a91540cc779fad"
+    },
+    {
+      "name": "transportSettings",
+      "line": 3300,
+      "sha256": "41d02c3d3ab4705de46ce3c7a56018dbc7cba22d48f748d1499be07b0abb7da4"
+    },
+    {
+      "name": "setupPlaceholder",
+      "line": 3337,
+      "sha256": "e538ddadb445c6654118dca5405d4b23c687bf2c9d19fbfe017db6703fd3c0c4"
+    },
+    {
+      "name": "bootstrapProfile",
+      "line": 3344,
+      "sha256": "1dea9d678326e6d091a7d67fe96e1f73410593c62bf85c908a9a8d9ea2389efb"
+    },
+    {
+      "name": "main",
+      "line": 3368,
+      "sha256": "44dfbc80ed2e71276524c3b26f5cf8c737ba5238420bc90073ff73356b9afe17"
+    }
+  ]
+}
